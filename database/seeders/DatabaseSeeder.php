@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             TagSeeder::class,
             PermissionUserSeeder::class,
             CommentSeeder::class,
+            PostTagSeeder::class,
         ]);
     }
 }

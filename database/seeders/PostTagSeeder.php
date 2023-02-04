@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\PermissionUser;
+use App\Models\PostTag;
 use Illuminate\Database\Seeder;
 
-class PermissionUserSeeder extends Seeder
+class PostTagSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class PermissionUserSeeder extends Seeder
      */
     public function run()
     {
-        PermissionUser::factory(10)->create();
+        PostTag::factory(10)->create();
     }
 }
