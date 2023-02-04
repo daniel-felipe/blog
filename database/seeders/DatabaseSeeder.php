@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
             PermissionSeeder::class,
             CategorySeeder::class,
             TagSeeder::class,
-            PostSeeder::class,
             PermissionUserSeeder::class,
+            CommentSeeder::class,
         ]);
     }
 }
