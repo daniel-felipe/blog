@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('thumb');
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->timestamp('published_at');
             $table->timestamps();
         });
     }
