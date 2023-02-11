@@ -10,6 +10,11 @@ class Tag extends Model
 {
     use HasFactory;
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
     public function Posts(): BelongsToMany
     {
         return $this->belongsToMany(Post::class);
