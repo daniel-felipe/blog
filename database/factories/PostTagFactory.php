@@ -19,8 +19,8 @@ class PostTagFactory extends Factory
     public function definition()
     {
         return [
-            'post_id' => rand(1, 10),
-            'tag_id' => rand(1, 10),
+            'post_id' => fake()->numberBetween(1, 10),
+            'tag_id' => fake()->numberBetween(1, 10),
         ];
     }
 }

@@ -23,7 +23,8 @@ class PostFactory extends Factory
             'slug' => str()->slug($title),
             'content' => fake()->paragraph(),
             'thumb' => fake()->sentence().'png',
-            'category_id' => rand(1, 3),
+            'category_id' => fake()->numberBetween(1, 3),
+            'user_id' => fake()->numberBetween(1, 10),
         ];
     }
 }

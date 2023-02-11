@@ -20,7 +20,7 @@ class CommentFactory extends Factory
         return [
             'content' => fake()->sentence(),
             'post_id' => Post::factory()->create(),
-            'user_id' => rand(1, 10),
+            'user_id' => fake()->numberBetween(1, 10),
         ];
     }
 }

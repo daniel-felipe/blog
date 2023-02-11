@@ -18,7 +18,7 @@ class PermissionUserFactory extends Factory
     public function definition()
     {
         return [
-            'permission_id' => rand(1, 3),
+            'permission_id' => fake()->numberBetween(1, 3),
             'user_id' => User::factory()->create(),
         ];
     }

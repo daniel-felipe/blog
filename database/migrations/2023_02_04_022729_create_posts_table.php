@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('thumb');
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
