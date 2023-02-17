@@ -25,7 +25,7 @@ class PostFactory extends Factory
             'thumb' => fake()->sentence().'png',
             'published_at' => fake()->date(),
             'category_id' => fake()->numberBetween(1, 3),
-            'user_id' => fake()->numberBetween(1, 10),
+            'author_id' => fake()->numberBetween(1, 10),
         ];
     }
 }

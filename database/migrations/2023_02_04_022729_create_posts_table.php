@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('thumb');
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('author_id')->constrained('users')->cascadeOnDelete();
             $table->timestamp('published_at');
             $table->timestamps();
         });
