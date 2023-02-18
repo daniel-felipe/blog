@@ -1,6 +1,8 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
-import BlogLayout from '../Layouts/BlogLayout.vue';
+import BlogContainer from '@/Shared/BlogContainer.vue';
+import BlogLayout from '@/Layouts/BlogLayout.vue';
+import BlogCard from '@/Components/BlogCard.vue';
 
 defineProps({
     posts: Object,
@@ -9,8 +11,12 @@ defineProps({
 </script>
 <template>
     <BlogLayout>
-        <Head title="Home Page" />
+        <BlogContainer class="py-24">
+            <Head title="Home Page" />
 
-        <h2>Home Page Section</h2>
+            <div class="grid grid-cols-3 gap-12">
+                <BlogCard :posts="posts" />
+            </div>
+        </BlogContainer>
     </BlogLayout>
 </template>

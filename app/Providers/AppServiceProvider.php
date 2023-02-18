@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Resources\PostResource;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        PostResource::withoutWrapping();
         Model::shouldBeStrict(! $this->app->isProduction());
         Model::unguard();
     }
