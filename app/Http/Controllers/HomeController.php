@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public function index(): Response
     {
-        $posts = Post::with(['author', 'tags', 'category'])->latest()->paginate(9);
+        $posts = Post::with(['author', 'tags', 'category'])->latest()->paginate(6);
 
         return Inertia::render('Home', [
             'posts' => PostResource::collection($posts),
